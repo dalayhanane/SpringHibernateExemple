@@ -1,5 +1,6 @@
 package com.websystique.spring.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ import org.joda.time.LocalDate;
 
 @Entity
 @Table(name="EMPLOYEE")
-public class Employee {
+public class Employee implements Serializable  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
