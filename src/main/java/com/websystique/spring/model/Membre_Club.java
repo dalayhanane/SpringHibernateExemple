@@ -1,8 +1,12 @@
 package com.websystique.spring.model;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,7 +21,10 @@ public class Membre_Club {
 	private String tel;
 	private String etat;
 	
-	
+	@ManyToMany
+    @JoinTable(name="Club_MembreClub")
+    private Collection<Club> clubs;
+    
 	public Membre_Club() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -28,6 +35,13 @@ public class Membre_Club {
 		this.prenom = prenom;
 		this.tel = tel;
 		this.etat = etat;
+	}
+	
+	public Collection<Club> getClubs() {
+		return clubs;
+	}
+	public void setClubs(Collection<Club> clubs) {
+		this.clubs = clubs;
 	}
 	public String getNom() {
 		return nom;
