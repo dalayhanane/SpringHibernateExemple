@@ -1,14 +1,9 @@
 package com.websystique.spring.model;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
-
-import javassist.tools.framedump;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 

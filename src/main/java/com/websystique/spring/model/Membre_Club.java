@@ -1,18 +1,25 @@
 package com.websystique.spring.model;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table
-public class Membre_Club {
+public class Membre_Club implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private Long id_membre;
@@ -24,6 +31,10 @@ public class Membre_Club {
 	@ManyToMany
     @JoinTable(name="Club_MembreClub")
     private Collection<Club> clubs;
+	
+	@ManyToOne
+	@JoinColumn
+	private Etudiant etudiant;
     
 	public Membre_Club() {
 		super();

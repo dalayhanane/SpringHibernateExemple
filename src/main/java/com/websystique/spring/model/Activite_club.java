@@ -1,5 +1,6 @@
 package com.websystique.spring.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -11,8 +12,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Activite_club {
+public class Activite_club implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue
 	private Long id_activiteClub;
