@@ -49,7 +49,7 @@ public class Fonctionnaire {
 	private int id_cycle;
 	private int activation; 
 	private int id_ecole;
-	private int numPermis;
+
 	
 	//getters and setters
 	public int getN_fonc() {
@@ -341,7 +341,7 @@ public class Fonctionnaire {
 			Date date_cadre, Date date_echel, String type_acces_echel, String enciennete_echel, Date date_tache,
 			Date date_nomination_delegation, Date date_nomination_academie, String type_fonc,
 			Date date_situation_familiale, String echel, String mode_affectation, int annee_scolaire, int id_matiere,
-			int id_conjoint, int id_tache, int id_cycle, int activation, int id_ecole,int numPermis) {
+			int id_conjoint, int id_tache, int id_cycle, int activation, int id_ecole) {
 		super();
 		this.nom_fonc = nom_fonc;
 		this.prenom_fonc = prenom_fonc;
@@ -387,18 +387,11 @@ public class Fonctionnaire {
 		this.id_cycle = id_cycle;
 		this.activation = activation;
 		this.id_ecole = id_ecole;
-		this.numPermis=numPermis;
+		
+	
+	
+	
 	}
-	public int getNumPermis() {
-		return numPermis;
-	}
-	public void setNumPermis(int numPermis) {
-		this.numPermis = numPermis;
-	}
-	
-	
-	
-	
 	
 
 }

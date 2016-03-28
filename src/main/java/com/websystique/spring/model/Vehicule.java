@@ -7,8 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 
 @Entity
@@ -40,6 +44,10 @@ public class Vehicule {
 
 	@OneToMany(mappedBy="vehicule")
 	private  Collection<Fonctionnaire> fonctionnaires;
+	
+	@ManyToOne
+	@JoinColumn
+	private etat_vehicule_tr etat;
 	
 	public int getNumImmatriculation() {
 		return numImmatriculation;
