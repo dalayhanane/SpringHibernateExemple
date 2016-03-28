@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table
+@Table(name="FRAIS_NIVEAU_PAIEMENT")
 public class Frais_Niveau implements Serializable{
 
 	/**

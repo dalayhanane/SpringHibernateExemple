@@ -7,8 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table
+
 @Entity
+@Table(name="CATEGORIE_DEPENSE")
 public class Categorie_depense implements Serializable{
 	
 	/**

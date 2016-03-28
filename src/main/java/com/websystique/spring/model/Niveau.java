@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name="NIVEAU_ETUDIANT")
 public class Niveau implements Serializable{
 	
 	/**

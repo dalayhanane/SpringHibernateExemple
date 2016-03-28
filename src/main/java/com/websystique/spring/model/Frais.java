@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table
+@Table(name="FRAIS_PAIEMENT")
 public class Frais implements Serializable{
 	
 	/**

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table
+@Table(name="FACTURE_PAIEMENT")
 public class Facture implements Serializable {
 
 	/**
