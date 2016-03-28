@@ -42,12 +42,14 @@ public class Vehicule {
 	private int nbreAnneeService;
 	private Double poids_total;
 
-	@OneToMany(mappedBy="vehicule")
-	private  Collection<Fonctionnaire> fonctionnaires;
 	
 	@ManyToOne
 	@JoinColumn
 	private etat_vehicule_tr etat;
+	
+	@ManyToOne
+	@JoinColumn
+	private Chauffeur_tr chauffeur;
 	
 	public int getNumImmatriculation() {
 		return numImmatriculation;
@@ -89,14 +91,7 @@ public class Vehicule {
 	}
 
 
-	public Collection<Fonctionnaire> getFonctionnaires() {
-		return fonctionnaires;
-	}
-
-
-	public void setFonctionnaires(Collection<Fonctionnaire> fonctionnaires) {
-		this.fonctionnaires = fonctionnaires;
-	}
+	
 
 
 	

@@ -31,8 +31,10 @@ public class Quartier_tr implements Serializable {
 	@JoinColumn
 	private Circuit_tr circuit;
 	
-	@OneToMany(mappedBy="quartier")
-	private Collection<Arret_tr> arrets;
+
+	
+	
+
 
 	public Quartier_tr() {
 		super();

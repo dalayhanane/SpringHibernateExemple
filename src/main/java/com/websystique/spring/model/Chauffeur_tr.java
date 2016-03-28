@@ -3,6 +3,7 @@ package com.websystique.spring.model;
 public class Chauffeur_tr extends Fonctionnaire{
 	
 	private int num_permis;
+	
 
 	public Chauffeur_tr(int num_permis) {
 		super();

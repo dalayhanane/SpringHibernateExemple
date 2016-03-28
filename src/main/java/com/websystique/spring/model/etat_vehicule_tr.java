@@ -28,18 +28,11 @@ public class etat_vehicule_tr implements Serializable {
     private String vitre;
     private String siege;
     private String carosserie;
-    
-    @OneToMany(mappedBy="etat")
-    private Collection<Vehicule> vehicules;
+   
     
   
     
-	public Collection<Vehicule> getVehicules() {
-		return vehicules;
-	}
-	public void setVehicules(Collection<Vehicule> vehicules) {
-		this.vehicules = vehicules;
-	}
+	
 	public int getId_etat_vehicule_tr() {
 		return id_etat_vehicule_tr;
 	}

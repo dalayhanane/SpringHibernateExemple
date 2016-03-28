@@ -9,10 +9,13 @@ public class Circuit_tr implements Serializable  {
 	
 	private int id_circuit;
 	
-	@OneToMany(mappedBy="")
-	private Collection<Quartier_tr> quartiers;
-	private Collection<Vehicule> vehicules;
 	
+
+	public Circuit_tr(int id_circuit) {
+		super();
+		this.id_circuit = id_circuit;
+	}
+
 
 	public int getId_circuit() {
 		return id_circuit;
@@ -21,26 +24,6 @@ public class Circuit_tr implements Serializable  {
 
 	public void setId_circuit(int id_circuit) {
 		this.id_circuit = id_circuit;
-	}
-
-
-	public Collection<Quartier_tr> getQuartiers() {
-		return quartiers;
-	}
-
-
-	public void setQuartiers(Collection<Quartier_tr> quartiers) {
-		this.quartiers = quartiers;
-	}
-
-
-	public Collection<Vehicule> getVehicules() {
-		return vehicules;
-	}
-
-
-	public void setVehicules(Collection<Vehicule> vehicules) {
-		this.vehicules = vehicules;
 	}
 
 

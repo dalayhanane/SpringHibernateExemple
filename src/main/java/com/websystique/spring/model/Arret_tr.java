@@ -26,6 +26,7 @@ public class Arret_tr implements Serializable {
 	@ManyToOne
 	@JoinColumn
 	private Quartier_tr quartier;
+	
 	public Arret_tr(int id_arret, String nom) {
 		super();
 		this.id_arret = id_arret;
