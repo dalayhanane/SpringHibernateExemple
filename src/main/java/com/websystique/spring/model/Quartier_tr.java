@@ -14,13 +14,14 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="quartier")
+@Table(name="quartier_tr")
 public class Quartier_tr implements Serializable {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_quartier;

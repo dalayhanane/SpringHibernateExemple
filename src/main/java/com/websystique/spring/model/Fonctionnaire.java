@@ -2,8 +2,11 @@ package com.websystique.spring.model;
 
 import java.util.Date;
 
+
+
+
 public class Fonctionnaire {
-	
+
 	private int n_fonc;
 	private String nom_fonc;
 	private String prenom_fonc;

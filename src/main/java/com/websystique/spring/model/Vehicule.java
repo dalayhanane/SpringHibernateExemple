@@ -1,5 +1,6 @@
 package com.websystique.spring.model;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -16,11 +17,16 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="vehicule")
-public class Vehicule {
+@Table(name="vehicule_tr")
+public class Vehicule implements Serializable {
 	
 	
-    public Vehicule() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Vehicule() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -50,6 +56,10 @@ public class Vehicule {
 	@ManyToOne
 	@JoinColumn
 	private Chauffeur_tr chauffeur;
+	
+	@ManyToOne
+	@JoinColumn
+	private Horaire horaire;
 	
 	public int getNumImmatriculation() {
 		return numImmatriculation;
