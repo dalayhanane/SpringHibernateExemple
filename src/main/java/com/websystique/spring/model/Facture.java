@@ -39,6 +39,10 @@ public class Facture implements Serializable {
 	@JoinColumn
 	private Frais_Niveau frais_niveau;
 	
+	@ManyToOne
+	@JoinColumn
+	private Reduction reduction;
+	
 	private Double avance;
 	private double prix;
 	

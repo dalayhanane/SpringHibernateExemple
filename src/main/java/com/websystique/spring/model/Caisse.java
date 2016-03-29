@@ -2,6 +2,7 @@ package com.websystique.spring.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +23,7 @@ public class Caisse implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id_caisse;
+	@Column(name = "nom_caisse", unique=true, nullable = false)
 	private String nom_caisse;
 	
 	@ManyToOne
